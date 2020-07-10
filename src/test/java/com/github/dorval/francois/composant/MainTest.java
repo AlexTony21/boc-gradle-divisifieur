@@ -10,7 +10,7 @@ import java.io.*;
 
 public class MainTest {
 
-    /*@Test
+    @Test
     public void testCasPassantBeteEtMechant() {
         PrintStream originalOut = System.out;
         ByteArrayOutputStream bos = new ByteArrayOutputStream();
@@ -18,10 +18,11 @@ public class MainTest {
 
         Main.main(new String[]{"6", "2"});
 
-        Assert.assertEquals("6/2=3\n", bos.toString());
+        //Changement du \n en \r\n car je suis sur Windows (erreur lors du lancement du test)
+        Assert.assertEquals("6/2=3\r\n", bos.toString());
 
         System.setOut(originalOut);
-    }*/
+    }
 
     @Test(expected = IllegalArgumentException.class)
     public void testCasKo() {
