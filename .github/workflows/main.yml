@@ -1,4 +1,4 @@
-name: Votre nom de workflow ici
+name: Workflow Divisifieur
 on: [push]
 jobs:
   build:
@@ -6,18 +6,18 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - name: Nom de l'action ici 
+      - name: Checkout 
         uses: actions/setup-java@v1
         with:
           java-version: 1.8
-      - name: Nom de l'action ici 
+      - name: Build Gradle
         run: ./gradlew build
         
-      - name : Nom de l'action ici 
+      - name : Exécution du Divisifieur
         run: java -jar build/libs/*.jar 3 1
       
-      - name: Nom de l'action ici 
+      - name: Création de l'artéfact 
         uses: actions/upload-artifact@v2
         with:
-          name: Nom de votre artefact ici
+          name: Création du .jar
           path: build/libs/*.jar
