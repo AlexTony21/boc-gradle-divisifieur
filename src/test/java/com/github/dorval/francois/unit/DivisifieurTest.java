@@ -1,6 +1,7 @@
 package com.github.dorval.francois.unit;
 
 import com.github.dorval.francois.business.Divisifieur;
+import com.github.dorval.francois.util.Errors;
 import org.junit.Assert;
 import org.junit.Test;
 

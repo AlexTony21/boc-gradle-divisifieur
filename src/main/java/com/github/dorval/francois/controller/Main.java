@@ -11,7 +11,7 @@ public class Main {
      * @param args
      */
     public static void main(final String[] args) {
-        if (args.length!=2){
+        if (args.length!=2) {
             throw new IllegalArgumentException(Errors.DEUX_ARGUMENTS_ATTENDUS);
         }
         int dividende = MathUtils.parseIntegerString(args[0]);

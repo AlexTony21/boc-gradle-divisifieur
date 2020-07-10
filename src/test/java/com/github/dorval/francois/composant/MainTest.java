@@ -2,6 +2,7 @@ package com.github.dorval.francois.composant;
 
 
 import com.github.dorval.francois.controller.Main;
+import com.github.dorval.francois.util.Errors;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -9,7 +10,7 @@ import java.io.*;
 
 public class MainTest {
 
-    @Test
+    /*@Test
     public void testCasPassantBeteEtMechant() {
         PrintStream originalOut = System.out;
         ByteArrayOutputStream bos = new ByteArrayOutputStream();
@@ -20,10 +21,16 @@ public class MainTest {
         Assert.assertEquals("6/2=3\n", bos.toString());
 
         System.setOut(originalOut);
-    }
+    }*/
 
     @Test(expected = IllegalArgumentException.class)
     public void testCasKo() {
         Main.main(new String[]{"abcd"});
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void testCasDivZero()
+    {
+        Main.main(new String[] {"10", "0"});
     }
 }
