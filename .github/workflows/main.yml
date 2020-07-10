@@ -1,0 +1,16 @@
+- uses: actions/checkout@v2
+      - name: Nom de l'action ici 
+        uses: actions/setup-java@v1
+        with:
+          java-version: 1.8
+      - name: Nom de l'action ici 
+        run: ./gradlew build
+        
+      - name : Nom de l'action ici 
+        run: java -jar build/libs/*.jar 3 1
+      
+      - name: Nom de l'action ici 
+        uses: actions/upload-artifact@v2
+        with:
+          name: Nom de votre artefact ici
+          path: build/libs/*.jar
